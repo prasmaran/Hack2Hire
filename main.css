@@ -1,0 +1,302 @@
+/* ------------------------------------------------------------------------ LOGIN --------------------------------------------------------------------- */
+.loglogin
+{
+  padding-top:0px; 
+  margin: 0px;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  color: #FFF;
+  height: 90%;
+}
+
+
+.loglogintitle
+{
+	text-align: center;
+	font-size: 50px;
+	color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.logcontainer 
+{
+  min-height: 350px;
+  max-width: 350px;
+  margin: 40px auto;
+  background: #FFF;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  overflow: hidden;
+  -webkit-animation: hi 2s;
+  animation: hi 2s;
+  -webkit-transform: translateZ(0px);
+  opacity: 0.9;
+  border-radius: 9px;
+
+}
+
+.logcontainer * 
+{
+  box-sizing: border-box;
+}
+
+.logpages 
+{
+  -webkit-box-flex: 1;
+  flex: 1;
+  white-space: nowrap;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  display: -webkit-box;
+  display: flex;
+}
+
+.logpages .logpage 
+{
+  min-width: 100%;
+  padding: 20px 15px;
+  padding-top: 15px;
+	padding-left:12px;
+  background: -webkit-gradient(linear, right top, left top, from(black), to(grey));
+  background-image: url("sources/black.jpg");
+}
+
+.logpages .logpage.logplay
+{
+  background: -webkit-gradient(linear, right top, left top, from(black), to(grey));
+   background-image: url("sources/black.jpg");
+}
+
+.logpages .logpage .logtitle 
+{
+  margin-bottom: 10px;
+  font-size: 14px;
+  position: relative;
+  line-height: 14px;
+}
+
+.logpages .logpage .logtitle i 
+{
+  vertical-align: text-bottom;
+  font-size: 19px;
+}
+
+.logpages .logpage .loginput 
+{
+  margin-top: 20px;
+}
+
+.logpages .logpage input.logtext 
+{
+  background: #F6F7F9;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 10px;
+  color: black;
+  outline: none;
+}
+
+.logpages .logpage .logbutlog 
+{
+  background: black;;
+  color: #F6F7F9;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.logtabs 
+{
+  max-height: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: flex;
+  background: #FFF;
+}
+
+.logtabs .logtab 
+{
+  -webkit-box-flex: 1;
+  flex: 1;
+  color: #5D708A;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.logtabs .logtab .logtext 
+{
+  font-size: 14px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.logpages .logpage:nth-of-type(1) .loginput 
+{
+  -webkit-transform: translateX(-100%) scale(0.5);
+          transform: translateX(-100%) scale(0.5);
+}
+
+.logpages .logpage:nth-of-type(2) .loginput 
+{
+  -webkit-transform: translateX(100%) scale(0.5);
+          transform: translateX(100%) scale(0.5);
+}
+.logpages .logpage .loginput {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+input[type=radio] 
+{
+  display: none;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logtabs .logtab:nth-of-type(1) 
+{
+  box-shadow: inset -3px 2px 5px rgba(0, 0, 0, 0.25);
+  color: #3F4C7F;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logtabs .logtab:nth-of-type(1) .logtext 
+{
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages 
+{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput:nth-child(1) 
+{
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput:nth-child(3) 
+{
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput:nth-child(4) 
+{
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+input[type=radio]:nth-of-type(1):checked ~ .logpages .logpage:nth-of-type(1) .loginput:nth-child(5) 
+{
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logtabs .logtab:nth-of-type(2) 
+{
+  box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.25);
+  color: #3F4C7F;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logtabs .logtab:nth-of-type(2) .logtext 
+{
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages 
+{
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput:nth-child(1) 
+{
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput:nth-child(2) 
+{
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput:nth-child(3) 
+{
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput:nth-child(4) 
+{
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+input[type=radio]:nth-of-type(2):checked ~ .logpages .logpage:nth-of-type(2) .loginput:nth-child(5) 
+{
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+@-webkit-keyframes hi 
+{
+  from 
+	{
+    -webkit-transform: translateY(50%) scale(0, 0);
+    transform: translateY(50%) scale(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes hi 
+{
+  from 
+	{
+    -webkit-transform: translateY(50%) scale(0, 0);
+            transform: translateY(50%) scale(0, 0);
+    opacity: 0;
+  }
+}
+
